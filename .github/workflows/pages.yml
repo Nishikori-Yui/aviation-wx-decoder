@@ -31,6 +31,15 @@ jobs:
           cache: "npm"
           cache-dependency-path: web/package-lock.json
 
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install wasm-pack
+        run: cargo install wasm-pack
+
+      - name: Build WASM
+        run: wasm-pack build crates/aviation-wx-wasm --target web --out-dir web/public/wasm
+
       - name: Install dependencies
         run: npm ci
         working-directory: web
@@ -42,6 +51,7 @@ jobs:
           VITE_BASE: "/aviation-wx-decoder/"
           VITE_API_BASE_URL: "https://example.com"
           VITE_AIRPORTS_URL: "https://github.com/Nishikori-Yui/aviation-airport-dataset/releases/latest/download/airports.json"
+          VITE_USE_WASM: "true"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
