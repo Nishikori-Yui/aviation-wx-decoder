@@ -1,0 +1,714 @@
+{
+  "AA": {
+    "en": "Minimum altitude (specify en route/crossing/safe)",
+    "zh-CN": "最低高度 (specify 航路/穿越/安全)"
+  },
+  "AC": {
+    "en": "Class B, C, D, or E Surface Area",
+    "zh-CN": "B 级, C, D, or E 地面区域"
+  },
+  "AD": {
+    "en": "Air defense identification zone",
+    "zh-CN": "防空识别区"
+  },
+  "AE": {
+    "en": "Control area",
+    "zh-CN": "管制区"
+  },
+  "AF": {
+    "en": "Flight information region",
+    "zh-CN": "飞行 信息 region"
+  },
+  "AH": {
+    "en": "Upper control area",
+    "zh-CN": "Upper 管制区"
+  },
+  "AL": {
+    "en": "Minimum usable flight level",
+    "zh-CN": "最低 usable 飞行高度层"
+  },
+  "AN": {
+    "en": "Area navigation route",
+    "zh-CN": "区域 导航 航路"
+  },
+  "AO": {
+    "en": "Oceanic control area",
+    "zh-CN": "Oceanic 管制区"
+  },
+  "AP": {
+    "en": "Reporting point (specify name or coded designator)",
+    "zh-CN": "报告 point (specify name or coded designator)"
+  },
+  "AR": {
+    "en": "ATS route (specify)",
+    "zh-CN": "ATS 航路 (specify)"
+  },
+  "AT": {
+    "en": "Terminal control area",
+    "zh-CN": "Terminal 管制区"
+  },
+  "AU": {
+    "en": "Upper flight information region",
+    "zh-CN": "Upper 飞行 信息 region"
+  },
+  "AV": {
+    "en": "Upper advisory area",
+    "zh-CN": "Upper advisory 区域"
+  },
+  "AX": {
+    "en": "Significant point",
+    "zh-CN": "Significant point"
+  },
+  "AZ": {
+    "en": "Aerodrome traffic zone",
+    "zh-CN": "机场 交通 zone"
+  },
+  "CA": {
+    "en": "Air/ground facility (specify service and frequency)",
+    "zh-CN": "Air/地面 设施 (specify 服务 and 频率)"
+  },
+  "CB": {
+    "en": "Automatic dependent surveillance — broadcast (details)",
+    "zh-CN": "Automatic dependent surveillance — broadcast (details)"
+  },
+  "CC": {
+    "en": "Automatic dependent surveillance — contract (details)",
+    "zh-CN": "Automatic dependent surveillance — contract (details)"
+  },
+  "CD": {
+    "en": "Controller-pilot data link communications (details)",
+    "zh-CN": "Controller-pilot data link 通信 (details)"
+  },
+  "CE": {
+    "en": "En route surveillance radar",
+    "zh-CN": "航路 surveillance 雷达"
+  },
+  "CG": {
+    "en": "Ground controlled approach system (GCA)",
+    "zh-CN": "地面 controlled 进近 系统 (GCA)"
+  },
+  "CL": {
+    "en": "Selective calling system (SELCAL)",
+    "zh-CN": "Selective calling 系统 (SELCAL)"
+  },
+  "CM": {
+    "en": "Surface movement radar",
+    "zh-CN": "地面 movement 雷达"
+  },
+  "CP": {
+    "en": "Precision approach radar (PAR) (specify runway)",
+    "zh-CN": "Precision 进近 雷达 (PAR) (specify 跑道)"
+  },
+  "CR": {
+    "en": "Surveillance radar element of precision approach radar system (specify wavelength)",
+    "zh-CN": "Surveillance 雷达 element of precision 进近 雷达 系统 (specify wavelength)"
+  },
+  "CS": {
+    "en": "Secondary surveillance radar (SSR)",
+    "zh-CN": "Secondary surveillance 雷达 (SSR)"
+  },
+  "CT": {
+    "en": "Terminal area surveillance radar (TAR)",
+    "zh-CN": "Terminal 区域 surveillance 雷达 (TAR)"
+  },
+  "FA": {
+    "en": "Aerodrome",
+    "zh-CN": "机场"
+  },
+  "FB": {
+    "en": "Friction measuring device (specify type)",
+    "zh-CN": "Friction measuring device (specify type)"
+  },
+  "FC": {
+    "en": "Ceiling measurement equipment",
+    "zh-CN": "Ceiling measurement 设备"
+  },
+  "FD": {
+    "en": "Docking system (specify AGNIS, BOLDS, etc.)",
+    "zh-CN": "Docking 系统 (specify AGNIS, BOLDS, etc.)"
+  },
+  "FE": {
+    "en": "Oxygen (specify type)",
+    "zh-CN": "Oxygen (specify type)"
+  },
+  "FF": {
+    "en": "Fire fighting and rescue",
+    "zh-CN": "Fire fighting and 救援"
+  },
+  "FG": {
+    "en": "Ground movement control",
+    "zh-CN": "地面 movement 管制"
+  },
+  "FH": {
+    "en": "Helicopter alighting area/platform",
+    "zh-CN": "Helicopter alighting 区域/platform"
+  },
+  "FI": {
+    "en": "Aircraft de-icing (specify)",
+    "zh-CN": "Aircraft de-icing (specify)"
+  },
+  "FJ": {
+    "en": "Oils (specify type)",
+    "zh-CN": "Oils (specify type)"
+  },
+  "FL": {
+    "en": "Landing direction indicator",
+    "zh-CN": "Landing direction indicator"
+  },
+  "FM": {
+    "en": "Meteorological service (specify type)",
+    "zh-CN": "气象 服务 (specify type)"
+  },
+  "FO": {
+    "en": "Fog dispersal system",
+    "zh-CN": "Fog dispersal 系统"
+  },
+  "FP": {
+    "en": "Heliport",
+    "zh-CN": "直升机场"
+  },
+  "FS": {
+    "en": "Snow removal equipment",
+    "zh-CN": "Snow removal 设备"
+  },
+  "FT": {
+    "en": "Transmissometer (specify runway and, where applicable, designator(s) of transmissometer(s))",
+    "zh-CN": "Transmissometer (specify 跑道 and, where applicable, designator(s) of transmissometer(s))"
+  },
+  "FU": {
+    "en": "Fuel availability",
+    "zh-CN": "Fuel availability"
+  },
+  "FW": {
+    "en": "Wind direction indicator",
+    "zh-CN": "Wind direction indicator"
+  },
+  "FZ": {
+    "en": "Customs/immigration",
+    "zh-CN": "Customs/immigration"
+  },
+  "GA": {
+    "en": "GNSS airfield-specific operations (specify operation)",
+    "zh-CN": "GNSS airfield-specific 运行 (specify 运行)"
+  },
+  "GW": {
+    "en": "GNSS area-wide operations (specify operation)",
+    "zh-CN": "GNSS 区域-wide 运行 (specify 运行)"
+  },
+  "IC": {
+    "en": "Instrument landing system (specify runway)",
+    "zh-CN": "仪表 landing 系统 (specify 跑道)"
+  },
+  "ID": {
+    "en": "DME associated with ILS",
+    "zh-CN": "DME associated with ILS"
+  },
+  "IG": {
+    "en": "Glide path (ILS) (specify runway)",
+    "zh-CN": "Glide path (ILS) (specify 跑道)"
+  },
+  "II": {
+    "en": "Inner marker (ILS) (specify runway)",
+    "zh-CN": "Inner 标志 (ILS) (specify 跑道)"
+  },
+  "IL": {
+    "en": "Localizer (ILS) (specify runway)",
+    "zh-CN": "Localizer (ILS) (specify 跑道)"
+  },
+  "IM": {
+    "en": "Middle marker (ILS) (specify runway)",
+    "zh-CN": "Middle 标志 (ILS) (specify 跑道)"
+  },
+  "IN": {
+    "en": "Localizer (not associated with ILS)",
+    "zh-CN": "Localizer (not associated with ILS)"
+  },
+  "IO": {
+    "en": "Outer marker (ILS) (specify runway)",
+    "zh-CN": "Outer 标志 (ILS) (specify 跑道)"
+  },
+  "IS": {
+    "en": "ILS Category I (specify runway)",
+    "zh-CN": "ILS Category I (specify 跑道)"
+  },
+  "IT": {
+    "en": "ILS Category II (specify runway)",
+    "zh-CN": "ILS Category II (specify 跑道)"
+  },
+  "IU": {
+    "en": "ILS Category III (specify runway)",
+    "zh-CN": "ILS Category III (specify 跑道)"
+  },
+  "IW": {
+    "en": "Microwave landing system (MLS) (specify runway)",
+    "zh-CN": "Microwave landing 系统 (MLS) (specify 跑道)"
+  },
+  "IX": {
+    "en": "Locator, outer (ILS) (specify runway)",
+    "zh-CN": "Locator, outer (ILS) (specify 跑道)"
+  },
+  "IY": {
+    "en": "Locator, middle (ILS) (specify runway)",
+    "zh-CN": "Locator, middle (ILS) (specify 跑道)"
+  },
+  "LA": {
+    "en": "Approach lighting system (specify runway and type)",
+    "zh-CN": "进近 灯光 系统 (specify 跑道 and type)"
+  },
+  "LB": {
+    "en": "Aerodrome beacon",
+    "zh-CN": "机场 信标"
+  },
+  "LC": {
+    "en": "Runway centre line lights (specify runway)",
+    "zh-CN": "跑道 中心 line lights (specify 跑道)"
+  },
+  "LD": {
+    "en": "Landing direction indicator lights",
+    "zh-CN": "Landing direction indicator lights"
+  },
+  "LE": {
+    "en": "Runway edge lights (specify runway)",
+    "zh-CN": "跑道 edge lights (specify 跑道)"
+  },
+  "LF": {
+    "en": "Sequenced flashing lights (specify runway)",
+    "zh-CN": "Sequenced flashing lights (specify 跑道)"
+  },
+  "LG": {
+    "en": "Pilot-controlled lighting",
+    "zh-CN": "Pilot-controlled 灯光"
+  },
+  "LH": {
+    "en": "High intensity runway lights (specify runway)",
+    "zh-CN": "High intensity 跑道 lights (specify 跑道)"
+  },
+  "LI": {
+    "en": "Runway end identifier lights (specify runway)",
+    "zh-CN": "跑道 end identifier lights (specify 跑道)"
+  },
+  "LJ": {
+    "en": "Runway alignment indicator lights (specify runway)",
+    "zh-CN": "跑道 alignment indicator lights (specify 跑道)"
+  },
+  "LK": {
+    "en": "Category II components of approach lighting system (specify runway)",
+    "zh-CN": "Category II components of 进近 灯光 系统 (specify 跑道)"
+  },
+  "LL": {
+    "en": "Low intensity runway lights (specify runway)",
+    "zh-CN": "Low intensity 跑道 lights (specify 跑道)"
+  },
+  "LM": {
+    "en": "Medium intensity runway lights (specify runway)",
+    "zh-CN": "Medium intensity 跑道 lights (specify 跑道)"
+  },
+  "LP": {
+    "en": "Precision approach path indicator (specify runway)",
+    "zh-CN": "Precision 进近 path indicator (specify 跑道)"
+  },
+  "LR": {
+    "en": "All landing area lighting facilities",
+    "zh-CN": "All landing 区域 灯光 设施"
+  },
+  "LS": {
+    "en": "Stopway lights (specify runway)",
+    "zh-CN": "Stopway lights (specify 跑道)"
+  },
+  "LT": {
+    "en": "Threshold lights (specify runway)",
+    "zh-CN": "Threshold lights (specify 跑道)"
+  },
+  "LU": {
+    "en": "Helicopter approach path indicator",
+    "zh-CN": "Helicopter 进近 path indicator"
+  },
+  "LV": {
+    "en": "Visual approach slope indicator system (specify type and runway)",
+    "zh-CN": "目视 进近 slope indicator 系统 (specify type and 跑道)"
+  },
+  "LW": {
+    "en": "Heliport lighting",
+    "zh-CN": "直升机场 灯光"
+  },
+  "LX": {
+    "en": "Taxiway centre line lights (specify taxiway)",
+    "zh-CN": "滑行道 中心 line lights (specify 滑行道)"
+  },
+  "LY": {
+    "en": "Taxiway edge lights (specify taxiway)",
+    "zh-CN": "滑行道 edge lights (specify 滑行道)"
+  },
+  "LZ": {
+    "en": "Runway touchdown zone lights (specify runway)",
+    "zh-CN": "跑道 touchdown zone lights (specify 跑道)"
+  },
+  "MA": {
+    "en": "Movement area",
+    "zh-CN": "Movement 区域"
+  },
+  "MB": {
+    "en": "Bearing strength (specify part of landing area or movement area)",
+    "zh-CN": "Bearing strength (specify part of landing 区域 or movement 区域)"
+  },
+  "MC": {
+    "en": "Clearway (specify runway)",
+    "zh-CN": "Clearway (specify 跑道)"
+  },
+  "MD": {
+    "en": "Declared distances (specify runway)",
+    "zh-CN": "Declared distances (specify 跑道)"
+  },
+  "MG": {
+    "en": "Taxiing guidance system",
+    "zh-CN": "Taxiing guidance 系统"
+  },
+  "MH": {
+    "en": "Runway arresting gear (specify runway)",
+    "zh-CN": "跑道 arresting gear (specify 跑道)"
+  },
+  "MK": {
+    "en": "Parking area",
+    "zh-CN": "Parking 区域"
+  },
+  "MM": {
+    "en": "Daylight markings (specify threshold, centre line, etc.)",
+    "zh-CN": "Daylight markings (specify threshold, 中心 line, etc.)"
+  },
+  "MN": {
+    "en": "Apron",
+    "zh-CN": "机坪"
+  },
+  "MO": {
+    "en": "Stopbar (specify runway)",
+    "zh-CN": "Stopbar (specify 跑道)"
+  },
+  "MP": {
+    "en": "Aircraft stands (specify)",
+    "zh-CN": "Aircraft stands (specify)"
+  },
+  "MR": {
+    "en": "Runway (specify runway)",
+    "zh-CN": "跑道 (specify 跑道)"
+  },
+  "MS": {
+    "en": "Stopway (specify runway)",
+    "zh-CN": "Stopway (specify 跑道)"
+  },
+  "MT": {
+    "en": "Threshold (specify runway)",
+    "zh-CN": "Threshold (specify 跑道)"
+  },
+  "MU": {
+    "en": "Runway turning bay (specify runway)",
+    "zh-CN": "跑道 turning bay (specify 跑道)"
+  },
+  "MW": {
+    "en": "Strip/shoulder (specify runway)",
+    "zh-CN": "Strip/shoulder (specify 跑道)"
+  },
+  "MX": {
+    "en": "Taxiway(s) (specify)",
+    "zh-CN": "滑行道(s) (specify)"
+  },
+  "MY": {
+    "en": "Rapid exit taxiway (specify)",
+    "zh-CN": "Rapid exit 滑行道 (specify)"
+  },
+  "NA": {
+    "en": "All radio navigation facilities (except...)",
+    "zh-CN": "All radio 导航 设施 (except...)"
+  },
+  "NB": {
+    "en": "Nondirectional radio beacon",
+    "zh-CN": "Nondirectional radio 信标"
+  },
+  "NC": {
+    "en": "DECCA",
+    "zh-CN": "DECCA"
+  },
+  "ND": {
+    "en": "Distance measuring equipment (DME)",
+    "zh-CN": "Distance measuring 设备 (DME)"
+  },
+  "NF": {
+    "en": "Fan marker",
+    "zh-CN": "Fan 标志"
+  },
+  "NL": {
+    "en": "Locator (specify identification)",
+    "zh-CN": "Locator (specify identification)"
+  },
+  "NM": {
+    "en": "VOR/DME",
+    "zh-CN": "VOR/DME"
+  },
+  "NN": {
+    "en": "TACAN",
+    "zh-CN": "TACAN"
+  },
+  "NO": {
+    "en": "OMEGA",
+    "zh-CN": "OMEGA"
+  },
+  "NT": {
+    "en": "VORTAC",
+    "zh-CN": "VORTAC"
+  },
+  "NV": {
+    "en": "VOR",
+    "zh-CN": "VOR"
+  },
+  "OA": {
+    "en": "Aeronautical information service",
+    "zh-CN": "Aeronautical 信息 服务"
+  },
+  "OB": {
+    "en": "Obstacle (specify details)",
+    "zh-CN": "障碍物 (specify details)"
+  },
+  "OE": {
+    "en": "Aircraft entry requirements",
+    "zh-CN": "Aircraft entry requirements"
+  },
+  "OL": {
+    "en": "Obstacle lights on ... (specify)",
+    "zh-CN": "障碍物 lights on ... (specify)"
+  },
+  "OR": {
+    "en": "Rescue coordination centre",
+    "zh-CN": "救援 coordination 中心"
+  },
+  "PA": {
+    "en": "Standard instrument arrival (specify route designator)",
+    "zh-CN": "Standard 仪表 到达 (specify 航路 designator)"
+  },
+  "PB": {
+    "en": "Standard VFR arrival",
+    "zh-CN": "Standard VFR 到达"
+  },
+  "PC": {
+    "en": "Contingency procedures",
+    "zh-CN": "Contingency 程序"
+  },
+  "PD": {
+    "en": "Standard instrument departure (specify route designator)",
+    "zh-CN": "Standard 仪表 离场 (specify 航路 designator)"
+  },
+  "PE": {
+    "en": "Standard VFR departure",
+    "zh-CN": "Standard VFR 离场"
+  },
+  "PF": {
+    "en": "Flow control procedure",
+    "zh-CN": "Flow 管制 程序"
+  },
+  "PH": {
+    "en": "Holding procedure",
+    "zh-CN": "等待 程序"
+  },
+  "PI": {
+    "en": "Instrument approach procedure (specify type and runway)",
+    "zh-CN": "仪表 进近 程序 (specify type and 跑道)"
+  },
+  "PK": {
+    "en": "VFR approach procedure",
+    "zh-CN": "VFR 进近 程序"
+  },
+  "PL": {
+    "en": "Flight plan processing (filing and related contingency)",
+    "zh-CN": "飞行 plan processing (filing and related contingency)"
+  },
+  "PM": {
+    "en": "Aerodrome operating minima (specify procedure and amended minimum)",
+    "zh-CN": "机场 operating minima (specify 程序 and amended 最低)"
+  },
+  "PN": {
+    "en": "Noise operating restriction",
+    "zh-CN": "Noise operating 限制"
+  },
+  "PO": {
+    "en": "Obstacle clearance altitude and height (specify procedure)",
+    "zh-CN": "障碍物 clearance 高度 and height (specify 程序)"
+  },
+  "PR": {
+    "en": "Radio failure procedure",
+    "zh-CN": "Radio failure 程序"
+  },
+  "PT": {
+    "en": "Transition altitude or transition level (specify)",
+    "zh-CN": "Transition 高度 or transition 高度层 (specify)"
+  },
+  "PU": {
+    "en": "Missed approach procedure (specify runway)",
+    "zh-CN": "Missed 进近 程序 (specify 跑道)"
+  },
+  "PX": {
+    "en": "Minimum holding altitude (specify fix)",
+    "zh-CN": "最低 等待 高度 (specify fix)"
+  },
+  "PZ": {
+    "en": "ADIZ procedure",
+    "zh-CN": "ADIZ 程序"
+  },
+  "RA": {
+    "en": "Airspace reservation (specify)",
+    "zh-CN": "空域 reservation (specify)"
+  },
+  "RD": {
+    "en": "Danger area (specify)",
+    "zh-CN": "危险 区域 (specify)"
+  },
+  "RM": {
+    "en": "Military operating area",
+    "zh-CN": "Military operating 区域"
+  },
+  "RO": {
+    "en": "Overflying of ... (specify)",
+    "zh-CN": "Overflying of ... (specify)"
+  },
+  "RP": {
+    "en": "Prohibited area (specify)",
+    "zh-CN": "禁止 区域 (specify)"
+  },
+  "RR": {
+    "en": "Restricted area (specify)",
+    "zh-CN": "限制 区域 (specify)"
+  },
+  "RT": {
+    "en": "Temporary restricted area (specify area)",
+    "zh-CN": "临时 限制 区域 (specify 区域)"
+  },
+  "SA": {
+    "en": "Automatic terminal information service",
+    "zh-CN": "Automatic terminal 信息 服务"
+  },
+  "SB": {
+    "en": "ATS reporting office",
+    "zh-CN": "ATS 报告 office"
+  },
+  "SC": {
+    "en": "Area control centre",
+    "zh-CN": "区域 管制 中心"
+  },
+  "SE": {
+    "en": "Flight information service",
+    "zh-CN": "飞行 信息 服务"
+  },
+  "SF": {
+    "en": "Aerodrome flight information service",
+    "zh-CN": "机场 飞行 信息 服务"
+  },
+  "SL": {
+    "en": "Flow control centre",
+    "zh-CN": "Flow 管制 中心"
+  },
+  "SO": {
+    "en": "Oceanic area control centre",
+    "zh-CN": "Oceanic 区域 管制 中心"
+  },
+  "SP": {
+    "en": "Approach control service",
+    "zh-CN": "进近 管制 服务"
+  },
+  "SS": {
+    "en": "Flight service station",
+    "zh-CN": "飞行 服务 station"
+  },
+  "ST": {
+    "en": "Aerodrome control tower",
+    "zh-CN": "机场 管制 tower"
+  },
+  "SU": {
+    "en": "Upper area control centre",
+    "zh-CN": "Upper 区域 管制 中心"
+  },
+  "SV": {
+    "en": "VOLMET broadcast",
+    "zh-CN": "VOLMET broadcast"
+  },
+  "SY": {
+    "en": "Upper advisory service (specify)",
+    "zh-CN": "Upper advisory 服务 (specify)"
+  },
+  "WA": {
+    "en": "Air display",
+    "zh-CN": "Air display"
+  },
+  "WB": {
+    "en": "Aerobatics",
+    "zh-CN": "Aerobatics"
+  },
+  "WC": {
+    "en": "Captive balloon or kite",
+    "zh-CN": "Captive balloon or kite"
+  },
+  "WD": {
+    "en": "Demolition of explosives",
+    "zh-CN": "Demolition of explosives"
+  },
+  "WE": {
+    "en": "Exercises (specify)",
+    "zh-CN": "Exercises (specify)"
+  },
+  "WF": {
+    "en": "Air refueling",
+    "zh-CN": "Air refueling"
+  },
+  "WG": {
+    "en": "Glider flying",
+    "zh-CN": "Glider flying"
+  },
+  "WH": {
+    "en": "Blasting",
+    "zh-CN": "Blasting"
+  },
+  "WJ": {
+    "en": "Banner/target towing",
+    "zh-CN": "Banner/target towing"
+  },
+  "WL": {
+    "en": "Ascent of free balloon",
+    "zh-CN": "Ascent of free balloon"
+  },
+  "WM": {
+    "en": "Missile, gun or rocket firing",
+    "zh-CN": "Missile, gun or rocket firing"
+  },
+  "WP": {
+    "en": "Parachute jumping exercise, paragliding, or hang gliding",
+    "zh-CN": "Parachute jumping 演练, paragliding, or hang gliding"
+  },
+  "WR": {
+    "en": "Radioactive materials or toxic chemicals (specify)",
+    "zh-CN": "Radioactive materials or toxic chemicals (specify)"
+  },
+  "WS": {
+    "en": "Burning or blowing gas",
+    "zh-CN": "Burning or blowing gas"
+  },
+  "WT": {
+    "en": "Mass movement of aircraft",
+    "zh-CN": "Mass movement of aircraft"
+  },
+  "WU": {
+    "en": "Unmanned aircraft",
+    "zh-CN": "Unmanned aircraft"
+  },
+  "WV": {
+    "en": "Formation flight",
+    "zh-CN": "Formation 飞行"
+  },
+  "WW": {
+    "en": "Significant volcanic activity",
+    "zh-CN": "Significant volcanic activity"
+  },
+  "WY": {
+    "en": "Aerial survey",
+    "zh-CN": "Aerial 测量"
+  },
+  "WZ": {
+    "en": "Model flying",
+    "zh-CN": "Model flying"
+  }
+}

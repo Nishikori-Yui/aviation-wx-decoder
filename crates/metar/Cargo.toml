@@ -1,0 +1,10 @@
+﻿[package]
+name = "aviation-wx-metar"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aviation-wx-core = { path = "../core" }
+serde = { workspace = true }
+regex = { workspace = true }
+

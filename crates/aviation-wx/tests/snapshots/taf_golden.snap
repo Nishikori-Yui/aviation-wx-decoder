@@ -1,0 +1,106 @@
+﻿---
+source: crates/aviation-wx/tests/golden.rs
+expression: results
+---
+[
+  {
+    "name": "001.txt",
+    "message_type": "taf",
+    "detected_type": "taf",
+    "explain": "台站 ZBAA，发布于 01 日 11:30Z，有效期 01 日 12Z - 02 日 18Z，风 60° 10kt，能见度 10km or more，云 FEW 2000ft, SCT 4000ft",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "002.txt",
+    "message_type": "taf",
+    "detected_type": "taf",
+    "explain": "台站 ZSPD，发布于 01 日 12:00Z，有效期 01 日 12Z - 02 日 18Z，风 90° 8kt，能见度 6000m，天气 -RA，云 BKN 2000ft。变化：TEMPO，01日12Z-01日16Z，能见度 3000m，天气 RA，云 SCT 800ft",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "003.txt",
+    "message_type": "taf",
+    "detected_type": "taf",
+    "explain": "台站 KSFO，发布于 01 日 11:30Z，有效期 01 日 12Z - 02 日 18Z，风 280° 12kt，能见度 10km or more，云 FEW 1500ft, BKN 3000ft",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "004.txt",
+    "message_type": "taf",
+    "detected_type": "taf",
+    "explain": "台站 EGLL，发布于 01 日 11:10Z，有效期 01 日 12Z - 02 日 18Z，风 240° 10kt，能见度 8000m，天气 -DZ，云 BKN 1200ft。变化：TEMPO，01日12Z-01日15Z，能见度 3000m，天气 DZ，云 BKN 600ft",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "005.txt",
+    "message_type": "taf",
+    "detected_type": "taf",
+    "explain": "台站 RJTT，发布于 01 日 11:00Z，有效期 01 日 12Z - 02 日 18Z，风 VRB 3kt，能见度 10km or more",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "006.txt",
+    "message_type": "taf",
+    "detected_type": "taf",
+    "explain": "台站 ZGGG，发布于 01 日 12:00Z，有效期 01 日 12Z - 02 日 18Z，风 120° 12kt，能见度 5000m，天气 HZ，云 BKN 3000ft。变化：TEMPO，01日15Z-01日18Z，能见度 2000m，天气 BR，云 SCT 500ft",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "007.txt",
+    "message_type": "taf",
+    "detected_type": "taf",
+    "explain": "台站 KJFK，发布于 01 日 11:30Z，有效期 01 日 12Z - 02 日 18Z，风 310° 15kt，能见度 10km or more，云 SCT 2500ft。变化：BECMG，01日16Z-01日18Z，风 200° 12kt",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "008.txt",
+    "message_type": "taf",
+    "detected_type": "taf",
+    "explain": "台站 KLAX，发布于 01 日 11:30Z，有效期 01 日 12Z - 02 日 18Z，风 260° 8kt，能见度 6000m，天气 BR，云 OVC 1000ft",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "009.txt",
+    "message_type": "taf",
+    "detected_type": "taf",
+    "explain": "台站 UUEE，发布于 01 日 11:00Z，有效期 01 日 12Z - 02 日 18Z，风 150° 10kt，能见度 10km or more，云 BKN 2000ft。变化：TEMPO，01日12Z-01日14Z，能见度 4000m，天气 -SN，云 SCT 1000ft",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "010.txt",
+    "message_type": "taf",
+    "detected_type": "taf",
+    "explain": "台站 VIDP，发布于 01 日 11:30Z，有效期 01 日 12Z - 02 日 18Z，风 40° 4kt，能见度 4000m，天气 FU，云 BKN 1200ft",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  }
+]

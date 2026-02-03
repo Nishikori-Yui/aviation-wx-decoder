@@ -1,0 +1,10 @@
+{
+  "ZBPE": { "en": "Beijing FIR", "zh-CN": "北京飞行情报区" },
+  "ZSHA": { "en": "Shanghai FIR", "zh-CN": "上海飞行情报区" },
+  "ZGZU": { "en": "Guangzhou FIR", "zh-CN": "广州飞行情报区" },
+  "ZPKM": { "en": "Kunming FIR", "zh-CN": "昆明飞行情报区" },
+  "ZWUQ": { "en": "Urumqi FIR", "zh-CN": "乌鲁木齐飞行情报区" },
+  "ZHWH": { "en": "Wuhan FIR", "zh-CN": "武汉飞行情报区" },
+  "ZYSH": { "en": "Shenyang FIR", "zh-CN": "沈阳飞行情报区" },
+  "ZLLL": { "en": "Lhasa FIR", "zh-CN": "拉萨飞行情报区" }
+}

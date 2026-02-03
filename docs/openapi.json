@@ -1,0 +1,159 @@
+﻿{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Aviation WX Decoder API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/healthz": {
+      "get": {
+        "summary": "Health check",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "string" }
+                  },
+                  "required": ["status"]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/decode": {
+      "post": {
+        "summary": "Decode a single message",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/DecodeRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Decoded response",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/DecodeResponse" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/decode/batch": {
+      "post": {
+        "summary": "Decode multiple messages",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/BatchDecodeRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Batch response",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/BatchDecodeResponse" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DecodeRequest": {
+        "type": "object",
+        "properties": {
+          "message": { "type": "string" },
+          "type": { "type": "string", "enum": ["auto", "taf", "metar", "notam"] },
+          "output": {
+            "type": "object",
+            "properties": {
+              "json": { "type": "boolean" },
+              "explain": { "type": "boolean" }
+            }
+          },
+          "lang": { "type": "string" },
+          "detail": { "type": "string", "enum": ["brief", "normal", "full"] }
+        },
+        "required": ["message"]
+      },
+      "DecodeResponse": {
+        "type": "object",
+        "properties": {
+          "schema_version": { "type": "string" },
+          "type": { "type": "string" },
+          "requested_type": { "type": "string" },
+          "detected_type": { "type": "string" },
+          "final_type": { "type": "string" },
+          "raw": { "type": "string" },
+          "parsed": { "type": ["object", "null"] },
+          "normalized": { "type": ["object", "null"] },
+          "explain": { "type": ["string", "null"] },
+          "warnings": { "type": "array", "items": { "$ref": "#/components/schemas/Issue" } },
+          "errors": { "type": "array", "items": { "$ref": "#/components/schemas/Issue" } },
+          "warnings_legacy": { "type": "array", "items": { "type": "string" } },
+          "errors_legacy": { "type": "array", "items": { "type": "string" } }
+        },
+        "required": ["schema_version", "type", "requested_type", "detected_type", "final_type", "raw", "warnings", "errors"]
+      },
+      "BatchDecodeRequest": {
+        "type": "object",
+        "properties": {
+          "messages": { "type": "array", "items": { "type": "string" } },
+          "type": { "type": "string", "enum": ["auto", "taf", "metar", "notam"] },
+          "output": {
+            "type": "object",
+            "properties": {
+              "json": { "type": "boolean" },
+              "explain": { "type": "boolean" }
+            }
+          },
+          "lang": { "type": "string" },
+          "detail": { "type": "string", "enum": ["brief", "normal", "full"] }
+        },
+        "required": ["messages"]
+      },
+      "BatchDecodeResponse": {
+        "type": "object",
+        "properties": {
+          "results": { "type": "array", "items": { "$ref": "#/components/schemas/DecodeResponse" } },
+          "errors": { "type": "array", "items": { "type": "string" } }
+        },
+        "required": ["results", "errors"]
+      },
+      "Issue": {
+        "type": "object",
+        "properties": {
+          "code": { "type": "string" },
+          "message": { "type": "string" },
+          "token": { "type": "string" },
+          "span": { "$ref": "#/components/schemas/IssueSpan" }
+        },
+        "required": ["code", "message"]
+      },
+      "IssueSpan": {
+        "type": "object",
+        "properties": {
+          "start": { "type": "integer" },
+          "end": { "type": "integer" }
+        },
+        "required": ["start", "end"]
+      }
+    }
+  }
+}

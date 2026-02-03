@@ -1,0 +1,310 @@
+{
+  "AC": {
+    "en": "Withdrawn for maintenance",
+    "zh-CN": "撤销 for 维护"
+  },
+  "AD": {
+    "en": "Available for daylight operation",
+    "zh-CN": "可用 for daylight 运行"
+  },
+  "AF": {
+    "en": "Flight checked and found reliable",
+    "zh-CN": "飞行 checked and found reliable"
+  },
+  "AG": {
+    "en": "Operating but ground checked only, awaiting flight check",
+    "zh-CN": "Operating but 地面 checked only, awaiting 飞行 check"
+  },
+  "AH": {
+    "en": "Hours of service are now…(specify)",
+    "zh-CN": "Hours of 服务 are now…(specify)"
+  },
+  "AK": {
+    "en": "Resumed normal operations",
+    "zh-CN": "Resumed normal 运行"
+  },
+  "AL": {
+    "en": "Operative (or reoperative) subject to previously published limitations/conditions",
+    "zh-CN": "Operative (or reoperative) subject to previously published limitations/conditions"
+  },
+  "AM": {
+    "en": "Military operations only",
+    "zh-CN": "Military 运行 only"
+  },
+  "AN": {
+    "en": "Available for night operation",
+    "zh-CN": "可用 for night 运行"
+  },
+  "AO": {
+    "en": "Operational",
+    "zh-CN": "Operational"
+  },
+  "AP": {
+    "en": "Available, prior permission required",
+    "zh-CN": "可用, prior permission required"
+  },
+  "AR": {
+    "en": "Available on request",
+    "zh-CN": "可用 on request"
+  },
+  "AS": {
+    "en": "Unserviceable",
+    "zh-CN": "不可用"
+  },
+  "AU": {
+    "en": "Not available (specify reason if appropriate)",
+    "zh-CN": "Not 可用 (specify reason if appropriate)"
+  },
+  "AW": {
+    "en": "Completely withdrawn",
+    "zh-CN": "Completely 撤销"
+  },
+  "AX": {
+    "en": "Previously promulgated shutdown has been canceled",
+    "zh-CN": "Previously promulgated shutdown has been canceled"
+  },
+  "CA": {
+    "en": "Activated",
+    "zh-CN": "Activated"
+  },
+  "CC": {
+    "en": "Completed",
+    "zh-CN": "Completed"
+  },
+  "CD": {
+    "en": "Deactivated",
+    "zh-CN": "Deactivated"
+  },
+  "CE": {
+    "en": "Erected",
+    "zh-CN": "Erected"
+  },
+  "CF": {
+    "en": "Operating frequency(ies) changed to",
+    "zh-CN": "Operating 频率(ies) changed to"
+  },
+  "CG": {
+    "en": "Downgraded to",
+    "zh-CN": "Downgraded to"
+  },
+  "CH": {
+    "en": "Changed",
+    "zh-CN": "Changed"
+  },
+  "CI": {
+    "en": "Identification or radio call sign changed to",
+    "zh-CN": "Identification or radio call sign changed to"
+  },
+  "CL": {
+    "en": "Realigned",
+    "zh-CN": "Realigned"
+  },
+  "CM": {
+    "en": "Displaced",
+    "zh-CN": "Displaced"
+  },
+  "CN": {
+    "en": "Canceled",
+    "zh-CN": "Canceled"
+  },
+  "CO": {
+    "en": "Operating",
+    "zh-CN": "Operating"
+  },
+  "CP": {
+    "en": "Operating on reduced power",
+    "zh-CN": "Operating on reduced power"
+  },
+  "CR": {
+    "en": "Temporarily replaced by",
+    "zh-CN": "Temporarily replaced by"
+  },
+  "CS": {
+    "en": "Installed",
+    "zh-CN": "Installed"
+  },
+  "CT": {
+    "en": "On test, do not use",
+    "zh-CN": "On test, do not use"
+  },
+  "HB": {
+    "en": "Friction coefficient is ... (specify friction measurement device used)",
+    "zh-CN": "Friction coefficient is ... (specify friction measurement device used)"
+  },
+  "HC": {
+    "en": "Covered by compacted snow to depth of",
+    "zh-CN": "Covered by compacted snow to depth of"
+  },
+  "HD": {
+    "en": "Covered by dry snow to a depth of",
+    "zh-CN": "Covered by dry snow to a depth of"
+  },
+  "HE": {
+    "en": "Covered by water to a depth of",
+    "zh-CN": "Covered by water to a depth of"
+  },
+  "HF": {
+    "en": "Totally free of snow and ice",
+    "zh-CN": "Totally free of snow and ice"
+  },
+  "HG": {
+    "en": "Grass cutting in progress",
+    "zh-CN": "Grass cutting in progress"
+  },
+  "HH": {
+    "en": "Hazard due to (specify)",
+    "zh-CN": "危险 due to (specify)"
+  },
+  "HI": {
+    "en": "Covered by ice",
+    "zh-CN": "Covered by ice"
+  },
+  "HJ": {
+    "en": "Launch planned ... (specify balloon flight identification or project code name, launch site, planned period of launch(es)-date/ time, expected climb direction, estimate time to pass 18 000 m (60 000 ft), or reaching cruise level if at or below 18 000 m (60 000 ft), together with estimated location)",
+    "zh-CN": "Launch planned ... (specify balloon 飞行 identification or project code name, launch site, planned period of launch(es)-date/ time, expected climb direction, estimate time to pass 18 000 m (60 000 ft), or reaching cruise 高度层 if at or below 18 000 m (60 000 ft), together with estimated location)"
+  },
+  "HK": {
+    "en": "Bird migration in progress",
+    "zh-CN": "Bird migration in progress"
+  },
+  "HL": {
+    "en": "Snow clearance completed",
+    "zh-CN": "Snow clearance completed"
+  },
+  "HM": {
+    "en": "Marked by",
+    "zh-CN": "Marked by"
+  },
+  "HN": {
+    "en": "Covered by wet snow or slush to a depth of",
+    "zh-CN": "Covered by wet snow or slush to a depth of"
+  },
+  "HO": {
+    "en": "Obscured by snow",
+    "zh-CN": "Obscured by snow"
+  },
+  "HP": {
+    "en": "Snow clearance in progress",
+    "zh-CN": "Snow clearance in progress"
+  },
+  "HQ": {
+    "en": "Operation canceled ... (specify balloon flight identification or project code name)",
+    "zh-CN": "运行 canceled ... (specify balloon 飞行 identification or project code name)"
+  },
+  "HR": {
+    "en": "Standing water",
+    "zh-CN": "Standing water"
+  },
+  "HS": {
+    "en": "Sanding in progress",
+    "zh-CN": "Sanding in progress"
+  },
+  "HT": {
+    "en": "Approach according to signal area only",
+    "zh-CN": "进近 according to 信号 区域 only"
+  },
+  "HU": {
+    "en": "Launch in progress ... (specify balloon flight identification or project code name, launch site, date/time of launch(es), estimated time passing 18 000 m (60 000 ft), or reaching cruising level if at or below 18 000 m (60 000 ft), together with estimated location, estimated date/time of termination of the flight, and planned location of ground contact when applicable)",
+    "zh-CN": "Launch in progress ... (specify balloon 飞行 identification or project code name, launch site, date/time of launch(es), estimated time passing 18 000 m (60 000 ft), or reaching cruising 高度层 if at or below 18 000 m (60 000 ft), together with estimated location, estimated date/time of termination of the 飞行, and planned location of 地面 contact when applicable)"
+  },
+  "HV": {
+    "en": "Work completed",
+    "zh-CN": "施工 completed"
+  },
+  "HW": {
+    "en": "Work in progress",
+    "zh-CN": "施工 in progress"
+  },
+  "HX": {
+    "en": "Concentration of birds",
+    "zh-CN": "Concentration of birds"
+  },
+  "HY": {
+    "en": "Snow banks exist (specify height)",
+    "zh-CN": "Snow banks exist (specify height)"
+  },
+  "HZ": {
+    "en": "Covered by frozen ruts and ridges",
+    "zh-CN": "Covered by frozen ruts and ridges"
+  },
+  "LA": {
+    "en": "Operating on auxiliary power supply",
+    "zh-CN": "Operating on auxiliary power supply"
+  },
+  "LB": {
+    "en": "Reserved for aircraft based therein",
+    "zh-CN": "Reserved for aircraft based therein"
+  },
+  "LC": {
+    "en": "Closed",
+    "zh-CN": "关闭"
+  },
+  "LD": {
+    "en": "Unsafe",
+    "zh-CN": "Unsafe"
+  },
+  "LE": {
+    "en": "Operating without auxiliary power supply",
+    "zh-CN": "Operating without auxiliary power supply"
+  },
+  "LF": {
+    "en": "Interference from",
+    "zh-CN": "Interference from"
+  },
+  "LG": {
+    "en": "Operating without identification",
+    "zh-CN": "Operating without identification"
+  },
+  "LH": {
+    "en": "Unserviceable for aircraft heavier than",
+    "zh-CN": "不可用 for aircraft heavier than"
+  },
+  "LI": {
+    "en": "Closed to IFR operations",
+    "zh-CN": "关闭 to IFR 运行"
+  },
+  "LK": {
+    "en": "Operating as a fixed light",
+    "zh-CN": "Operating as a fixed 灯光"
+  },
+  "LL": {
+    "en": "Usable for length of...and width of...",
+    "zh-CN": "Usable for length of...and width of..."
+  },
+  "LN": {
+    "en": "Closed to all night operations",
+    "zh-CN": "关闭 to all night 运行"
+  },
+  "LP": {
+    "en": "Prohibited to",
+    "zh-CN": "禁止 to"
+  },
+  "LR": {
+    "en": "Aircraft restricted to runways and taxiways",
+    "zh-CN": "Aircraft 限制 to runways and taxiways"
+  },
+  "LS": {
+    "en": "Subject to interruption",
+    "zh-CN": "Subject to interruption"
+  },
+  "LT": {
+    "en": "Limited to",
+    "zh-CN": "限于"
+  },
+  "LV": {
+    "en": "Closed to VFR operations",
+    "zh-CN": "关闭 to VFR 运行"
+  },
+  "LW": {
+    "en": "Will take place",
+    "zh-CN": "将进行"
+  },
+  "LX": {
+    "en": "Operating but caution advised due to",
+    "zh-CN": "运行中但需谨慎，原因"
+  },
+  "XX": {
+    "en": "Where 4th and 5th letter Code does not cover the situation, use XX and supplement by plain language",
+    "zh-CN": "Where 4th and 5th letter Code does not cover the situation, use XX and supplement by plain language"
+  }
+}

@@ -1,0 +1,34 @@
+﻿[workspace]
+resolver = "2"
+members = [
+  "crates/core",
+  "crates/taf",
+  "crates/metar",
+  "crates/notam",
+  "crates/aviation-wx",
+  "crates/aviation-wx-wasm",
+  "crates/backend"
+]
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+
+[workspace.dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+anyhow = "1.0"
+nom = "7"
+regex = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+axum = "0.7"
+tower = "0.4"
+tower-http = { version = "0.5", features = ["trace", "request-id", "cors"] }
+clap = { version = "4", features = ["derive", "env"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+tokio = { version = "1", features = ["full"] }
+insta = { version = "1.38", features = ["json"] }
+
+

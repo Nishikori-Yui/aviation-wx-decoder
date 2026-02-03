@@ -1,0 +1,106 @@
+﻿---
+source: crates/aviation-wx/tests/golden.rs
+expression: results
+---
+[
+  {
+    "name": "001.txt",
+    "message_type": "notam",
+    "detected_type": "notam",
+    "explain": "地点 ZSPD，生效 2402010000，终止 2402012359，内容 RWY 17L/35R CLSD",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "002.txt",
+    "message_type": "notam",
+    "detected_type": "notam",
+    "explain": "地点 ZBAA，生效 2402010600，终止 2402011800，内容 TWY B CLSD",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "003.txt",
+    "message_type": "notam",
+    "detected_type": "notam",
+    "explain": "地点 RJTT，生效 2402010000，终止 2402011200，内容 RWY 04/22 CLSD",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "004.txt",
+    "message_type": "notam",
+    "detected_type": "notam",
+    "explain": "地点 EGLL，生效 2402010900，终止 2402011700，内容 AD CLSD FOR MAINT",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "005.txt",
+    "message_type": "notam",
+    "detected_type": "notam",
+    "explain": "地点 KSFO，生效 2402010000，终止 2402012359，内容 ILS RWY 28R U/S",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "006.txt",
+    "message_type": "notam",
+    "detected_type": "notam",
+    "explain": "地点 KJFK，生效 2402010100，终止 2402010600，内容 APRON EAST CLSD",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "007.txt",
+    "message_type": "notam",
+    "detected_type": "notam",
+    "explain": "地点 OMDB，生效 2402010000，终止 2402011200，内容 RWY 12/30 CLSD",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "008.txt",
+    "message_type": "notam",
+    "detected_type": "notam",
+    "explain": "地点 ZGGG，生效 2402010000，终止 2402012359，内容 TWY D CLSD",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "009.txt",
+    "message_type": "notam",
+    "detected_type": "notam",
+    "explain": "地点 UUEE，生效 2402010600，终止 2402011200，内容 AD CLSD",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "010.txt",
+    "message_type": "notam",
+    "detected_type": "notam",
+    "explain": "地点 ZBAA，生效 2402010000，终止 2402012359，内容 WORK IN PROGRESS",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  }
+]

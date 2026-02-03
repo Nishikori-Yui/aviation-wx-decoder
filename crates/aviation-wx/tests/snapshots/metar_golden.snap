@@ -1,0 +1,171 @@
+﻿---
+source: crates/aviation-wx/tests/golden.rs
+expression: results
+---
+[
+  {
+    "name": "001.txt",
+    "message_type": "metar",
+    "detected_type": "metar",
+    "explain": "台站 ZBAA，发布于 01 日 12:00Z，风 20° 10kt，能见度 6000m，天气 HZ，云 SCT 2000ft, BKN 5000ft，气温 2°C 露点 -3°C，气压（QNH）≈ 1015.0 hPa",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "002.txt",
+    "message_type": "metar",
+    "detected_type": "metar",
+    "explain": "台站 KSFO，发布于 01 日 11:56Z，风 280° 12kt，能见度 10km or more，云 FEW 1500ft, BKN 3000ft，气温 12°C 露点 8°C，气压（Altimeter）≈ 1020.0 hPa",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "003.txt",
+    "message_type": "metar",
+    "detected_type": "metar",
+    "explain": "台站 EGLL，发布于 01 日 11:50Z，风 240° 10kt，能见度 8000m，天气 -DZ，云 BKN 1200ft，气温 7°C 露点 5°C，气压（QNH）≈ 1008.0 hPa",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "004.txt",
+    "message_type": "metar",
+    "detected_type": "metar",
+    "explain": "台站 RJTT，发布于 01 日 12:00Z，风 VRB 3kt，能见度 10km or more，气温 15°C 露点 10°C，气压（QNH）≈ 1017.0 hPa",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "005.txt",
+    "message_type": "metar",
+    "detected_type": "metar",
+    "explain": "台站 KJFK，发布于 01 日 11:51Z，风 310° 15kt gust 25kt，能见度 10km or more，云 SCT 2500ft，气温 5°C 露点 -2°C，气压（Altimeter）≈ 1013.2 hPa",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "006.txt",
+    "message_type": "metar",
+    "detected_type": "metar",
+    "explain": "台站 KLAX，发布于 01 日 12:10Z，风 260° 8kt，能见度 8047m，天气 BR，云 OVC 1000ft，气温 14°C 露点 12°C，气压（Altimeter）≈ 1015.9 hPa",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "007.txt",
+    "message_type": "metar",
+    "detected_type": "metar",
+    "explain": "台站 UUEE，发布于 01 日 11:30Z，风 150° 10kt，能见度 4000m，天气 -SN，云 SCT 1000ft, BKN 2000ft，气温 -2°C 露点 -5°C，气压（QNH）≈ 1000.0 hPa",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "008.txt",
+    "message_type": "metar",
+    "detected_type": "metar",
+    "explain": "台站 VHHH，发布于 01 日 12:00Z，风 90° 12kt，能见度 8000m，天气 SHRA，云 SCT 1500ft, BKN 3000ft，气温 18°C 露点 16°C，气压（QNH）≈ 1012.0 hPa",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "009.txt",
+    "message_type": "metar",
+    "detected_type": "metar",
+    "explain": "台站 ZGGG，发布于 01 日 12:00Z，风 120° 12kt，能见度 5000m，天气 HZ，云 BKN 3000ft，气温 22°C 露点 18°C，气压（QNH）≈ 1005.0 hPa",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "010.txt",
+    "message_type": "metar",
+    "detected_type": "metar",
+    "explain": "台站 OMDB，发布于 01 日 12:00Z，风 0° 0kt，能见度 10km or more，云 FEW 2000ft，气温 25°C 露点 16°C，气压（QNH）≈ 1010.0 hPa。趋势：NOSIG",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "011.txt",
+    "message_type": "metar",
+    "detected_type": "metar",
+    "explain": "台站 KDEN，发布于 01 日 12:00Z，风 210° 5kt，能见度 10km or more，云 FEW 2000ft，气温 5°C 露点 -2°C，气压（Altimeter）≈ 1014.2 hPa",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "012.txt",
+    "message_type": "metar",
+    "detected_type": "metar",
+    "explain": "台站 ZBAA，发布于 01 日 12:00Z，风 20° 10kt，能见度 6000m，天气 HZ，云 SCT 2000ft，气温 2°C 露点 -3°C，气压（QNH）≈ 1015.0 hPa（Altimeter ≈ 1013.2 hPa）",
+    "warnings": [
+      {
+        "code": "pressure_conflict",
+        "message": "Both QNH and altimeter present; using QNH as primary pressure."
+      }
+    ],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "013.txt",
+    "message_type": "metar",
+    "detected_type": "metar",
+    "explain": "台站 EGLL，发布于 01 日 11:50Z，风 180° 10kt，风向在 180°-240° 间波动，能见度 10km or more，天气 -RA，云 BKN 1200ft，气温 7°C 露点 5°C，气压（QNH）≈ 1008.0 hPa",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "014.txt",
+    "message_type": "metar",
+    "detected_type": "metar",
+    "explain": "台站 RJTT，发布于 01 日 12:00Z，风 40° 5kt，能见度 1200m，跑道 34L RVR 约 600m（趋势上升），云 OVC 500ft，气温 12°C 露点 11°C，气压（QNH）≈ 1006.0 hPa",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "015.txt",
+    "message_type": "metar",
+    "detected_type": "metar",
+    "explain": "台站 ZSPD，发布于 01 日 12:00Z，风 20° 12kt，能见度 2000m，跑道 16 RVR 约 800-1200m（趋势下降），云 OVC 800ft，气温 3°C 露点 -1°C，气压（QNH）≈ 1012.0 hPa",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  },
+  {
+    "name": "016.txt",
+    "message_type": "metar",
+    "detected_type": "metar",
+    "explain": "台站 KSFO，发布于 01 日 11:56Z，风 280° 12kt，能见度 10km or more，云 FEW 1500ft, BKN 3000ft，气温 12°C 露点 8°C，气压（Altimeter）≈ 1020.0 hPa，备注（RMK）：AO2 SLP132 T01220083",
+    "warnings": [],
+    "errors": [],
+    "has_parsed": true,
+    "has_normalized": true
+  }
+]

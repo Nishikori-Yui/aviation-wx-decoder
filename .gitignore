@@ -1,0 +1,25 @@
+# Rust
+/target/
+**/target/
+
+# Node / Vite
+/web/node_modules/
+/web/dist/
+/web/.env
+/web/.env.*.local
+/web/public/data/airports.json
+/web/public/wasm/*.wasm
+/web/public/wasm/*.d.ts
+/web/public/wasm/package.json
+/web/public/wasm/README.md
+
+# Logs
+*.log
+
+# OS / Editor
+.vscode/
+.DS_Store
+Thumbs.db
+
+# External repos
+/external/aviation-airport-dataset/
