@@ -41,7 +41,8 @@ jobs:
         run: cargo install wasm-pack
 
       - name: Build WASM
-        run: wasm-pack build crates/aviation-wx-wasm --target web --out-dir web/public/wasm
+        working-directory: crates/aviation-wx-wasm
+        run: wasm-pack build --target web --out-dir ../../web/public/wasm
 
       - name: Verify WASM artifacts
         run: |
