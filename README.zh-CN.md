@@ -137,6 +137,16 @@ Vite 环境变量：
 
 前端是纯静态 Vite 应用，可部署在 Cloudflare Pages、GitHub Pages、Vercel 等。构建时配置 `VITE_API_BASE_URL` 和 `VITE_AIRPORTS_URL` 指向后端与数据集。
 
+### GitHub Pages
+
+仓库内置 `.github/workflows/pages.yml`，会自动构建 `web` 并发布到 GitHub Pages。
+
+启用 Pages 前请确认：
+
+1. 在仓库设置中开启 Pages，Source 选择 **GitHub Actions**。
+2. 将 workflow 里的 `VITE_API_BASE_URL` 改为你的后端地址。
+3. 如果仓库名变更，请同步更新 `VITE_BASE`。
+
 ## WASM 模式
 
 前端可通过 WASM 在本地解码。构建说明见 `docs/wasm.md`。

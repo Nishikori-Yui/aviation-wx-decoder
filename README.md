@@ -136,6 +136,16 @@ Local override:
 
 The frontend is a static Vite app and can be deployed to providers such as Cloudflare Pages, GitHub Pages, or Vercel. Set `VITE_API_BASE_URL` and `VITE_AIRPORTS_URL` at build time to point to your backend and dataset.
 
+### GitHub Pages
+
+The workflow `.github/workflows/pages.yml` builds `web` and deploys to GitHub Pages.
+
+Before enabling Pages:
+
+1. In GitHub repo settings, enable Pages and select **GitHub Actions** as the source.
+2. Update `VITE_API_BASE_URL` in the workflow to your backend URL.
+3. If your repo name changes, update `VITE_BASE` in the workflow.
+
 ## WASM mode
 
 The frontend can decode locally via WASM. See `docs/wasm.md` for build steps.
