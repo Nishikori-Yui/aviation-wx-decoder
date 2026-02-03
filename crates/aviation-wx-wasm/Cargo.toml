@@ -1,19 +1,18 @@
 [package]
 name = "aviation-wx-wasm"
-version = "0.1.0"
+version = "0.1.2"
 edition = "2021"
 license.workspace = true
-description = "WASM bindings for aviation-wx decoding."
+description = "WASM bindings for aviation-wx."
 repository = "https://github.com/Nishikori-Yui/aviation-wx-decoder"
 
 [lib]
-crate-type = ["cdylib"]
+crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-aviation-wx = { path = "../aviation-wx" }
+aviation-wx = { path = "../aviation-wx", version = "0.1.2" }
 serde = { workspace = true }
 serde_json = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
 wasm-bindgen = "0.2"
-
-[profile.release]
-opt-level = "z"

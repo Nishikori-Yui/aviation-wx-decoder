@@ -5,8 +5,9 @@ async function loadWasmModule() {
     return wasmModulePromise;
   }
   wasmModulePromise = (async () => {
-    const moduleUrl = `${window.location.origin}/wasm/aviation_wx_wasm.js`;
-    const wasmUrl = `${window.location.origin}/wasm/aviation_wx_wasm_bg.wasm`;
+    const baseUrl = import.meta.env.BASE_URL || "/";
+    const moduleUrl = new URL(`${baseUrl}wasm/aviation_wx_wasm.js`, window.location.origin).toString();
+    const wasmUrl = new URL(`${baseUrl}wasm/aviation_wx_wasm_bg.wasm`, window.location.origin).toString();
     const module = await import(/* @vite-ignore */ moduleUrl);
     const init = module.default;
     if (typeof init !== "function") {
