@@ -1,5 +1,12 @@
 # Aviation WX Decoder
 
+![License](https://img.shields.io/github/license/Nishikori-Yui/aviation-wx-decoder)
+![Rust](https://img.shields.io/badge/Rust-2021-DEA584?logo=rust)
+![Frontend](https://img.shields.io/badge/Frontend-React%20%2F%20Vite-61DAFB?logo=react)
+![Backend](https://img.shields.io/badge/Backend-Axum-0F172A)
+
+[English](README.md) | [中文](README.zh-CN.md)
+
 A Rust 2021 workspace for decoding aviation weather messages. It parses TAF, METAR, and NOTAM, normalizes key fields, and produces structured JSON. The frontend renders multilingual explanations from the JSON and provides message analysis.
 
 It ships as:
@@ -7,6 +14,20 @@ It ships as:
 - A reusable Rust library (`crates/aviation-wx`) with `parse_*`, `normalize_*`, `translate_*`, and `decode_message` APIs.
 - A backend HTTP service (`crates/backend`).
 - A React/Vite frontend (`web`) with field breakdown, explanation, and station lookup.
+
+## Architecture
+
+```mermaid
+graph LR
+  A["Message Input"] --> B["Rust Core (parse/normalize)"]
+  B --> C["Structured JSON"]
+  C --> D["Backend API (Axum)"]
+  C --> E["WASM (optional)"]
+  D --> F["Web Frontend (React/Vite)"]
+  E --> F
+  F --> G["Field Breakdown & Explanation"]
+  F --> H["Station Dataset Lookup"]
+```
 
 ## Workspace Layout
 

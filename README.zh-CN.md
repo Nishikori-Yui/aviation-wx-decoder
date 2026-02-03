@@ -1,5 +1,12 @@
 # Aviation WX Decoder（中文说明）
 
+![License](https://img.shields.io/github/license/Nishikori-Yui/aviation-wx-decoder)
+![Rust](https://img.shields.io/badge/Rust-2021-DEA584?logo=rust)
+![前端](https://img.shields.io/badge/前端-React%20%2F%20Vite-61DAFB?logo=react)
+![后端](https://img.shields.io/badge/后端-Axum-0F172A)
+
+[English](README.md) | [中文](README.zh-CN.md)
+
 这是一个 Rust 2021 workspace，用于解析 TAF / METAR / NOTAM，输出结构化 JSON，并在前端完成多语言解释与报文拆解。
 
 提供：
@@ -10,6 +17,20 @@
 - 前端内置常见 NOTAM 正文缩写词表（如 AD、RWY、CLSD），并会持续补充覆盖范围。
 - Q 代码解析使用 FAA Appendix B 词表，并会持续扩充覆盖范围。
 - FIR 代码到名称的轻量映射可在 `web/src/data/fir_codes.json` 中维护（可选）。
+
+## Architecture
+
+```mermaid
+graph LR
+  A["报文输入"] --> B["Rust Core（解析/归一化）"]
+  B --> C["结构化 JSON"]
+  C --> D["后端 API（Axum）"]
+  C --> E["WASM（可选）"]
+  D --> F["Web 前端（React/Vite）"]
+  E --> F
+  F --> G["字段拆解与解读"]
+  F --> H["机场数据集匹配"]
+```
 
 ## 目录结构
 
