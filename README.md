@@ -150,6 +150,57 @@ Before enabling Pages:
 
 The frontend can decode locally via WASM. See `docs/wasm.md` for build steps.
 
+## iOS Shortcuts (WASM via Pages)
+
+You can use iOS Shortcuts without a backend by calling the hosted WASM bridge page:
+
+```
+https://<your-pages-domain>/shortcut.html
+```
+
+Suggested Shortcut flow:
+
+1) **Ask for Input**  
+Prompt (bilingual): `请输入报文 / Enter message`
+
+2) **Choose from Menu (message type)**  
+Title (bilingual): `选择报文类型 / Choose message type`  
+Options (labels):
+- Auto
+- METAR
+- TAF
+- NOTAM
+
+3) **Choose from Menu (language)**  
+Title (bilingual): `选择语言 / Choose language`  
+Options (labels):
+- 简体中文
+- English
+
+4) **Dictionary**  
+- `message`: input from step 1  
+- `type`: `auto|metar|taf|notam` (use lowercase in the dictionary)  
+- `lang`: `zh-CN` for 简体中文, `en` for English
+
+5) **Run JavaScript on Web Page**  
+URL: `https://<your-pages-domain>/shortcut.html`  
+Input: the dictionary from step 4
+
+```javascript
+const run = async () => {
+  try {
+    const result = await window.decodeMessage(input);
+    completion(result);
+  } catch (err) {
+    completion(`Decode failed: ${err}`);
+  }
+};
+run();
+```
+
+6) **Show Result** (optional)  
+7) **Copy to Clipboard** (recommended)
+
 ### ODbL Attribution
 
 Station data derived from OpenStreetMap contributors (ODbL). The UI and documentation must include attribution and a link to the derived dataset download location (GitHub Releases).

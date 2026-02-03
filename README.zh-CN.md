@@ -151,6 +151,57 @@ Vite 环境变量：
 
 前端可通过 WASM 在本地解码。构建说明见 `docs/wasm.md`。
 
+## iOS 快捷指令（WASM / Pages）
+
+无需后端，直接通过 GitHub Pages 上的 WASM 桥接页完成解码：
+
+```
+https://<你的 Pages 域名>/shortcut.html
+```
+
+建议的快捷指令流程：
+
+1) **询问文本**  
+提示（双语）：`请输入报文 / Enter message`
+
+2) **从菜单中选取（报文类型）**  
+标题（双语）：`选择报文类型 / Choose message type`  
+选项（原样）：
+- Auto
+- METAR
+- TAF
+- NOTAM
+
+3) **从菜单中选取（语言）**  
+标题（双语）：`选择语言 / Choose language`  
+选项（原样）：
+- 简体中文
+- English
+
+4) **字典**  
+- `message`：第 1 步输入  
+- `type`：`auto|metar|taf|notam`（字典里用小写）  
+- `lang`：简体中文用 `zh-CN`，English 用 `en`
+
+5) **在网页上运行 JavaScript**  
+URL：`https://<你的 Pages 域名>/shortcut.html`  
+输入：第 4 步字典
+
+```javascript
+const run = async () => {
+  try {
+    const result = await window.decodeMessage(input);
+    completion(result);
+  } catch (err) {
+    completion(`Decode failed: ${err}`);
+  }
+};
+run();
+```
+
+6) **显示结果**（可选）  
+7) **复制到剪贴板**（推荐）
+
 ### ODbL 署名
 
 机场数据来自 OpenStreetMap contributors（ODbL）。需要在 UI 和文档中标注来源，并提供派生数据的下载地址（GitHub Releases）。
