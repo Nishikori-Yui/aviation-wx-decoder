@@ -1,7 +1,10 @@
-﻿[package]
+[package]
 name = "aviation-wx-core"
 version = "0.1.0"
 edition = "2021"
+license.workspace = true
+repository = "https://github.com/Nishikori-Yui/aviation-wx-decoder"
+description = "Shared models and normalization helpers for aviation-wx."
 
 [dependencies]
 serde = { workspace = true }
@@ -10,4 +13,3 @@ thiserror = { workspace = true }
 anyhow = { workspace = true }
 nom = { workspace = true }
 regex = { workspace = true }
-

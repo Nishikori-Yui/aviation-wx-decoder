@@ -20,4 +20,9 @@ jobs:
       - name: Publish crate
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
-        run: cargo publish -p aviation-wx
+        run: |
+          cargo publish -p aviation-wx-core
+          cargo publish -p aviation-wx-taf
+          cargo publish -p aviation-wx-metar
+          cargo publish -p aviation-wx-notam
+          cargo publish -p aviation-wx

@@ -1,10 +1,12 @@
-﻿[package]
+[package]
 name = "aviation-wx-taf"
 version = "0.1.0"
 edition = "2021"
+license.workspace = true
+repository = "https://github.com/Nishikori-Yui/aviation-wx-decoder"
+description = "TAF parser and normalizer for aviation-wx."
 
 [dependencies]
-aviation-wx-core = { path = "../core" }
+aviation-wx-core = { path = "../core", version = "0.1.0" }
 serde = { workspace = true }
 regex = { workspace = true }
-
