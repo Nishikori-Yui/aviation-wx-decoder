@@ -7,6 +7,7 @@ import { useDecode } from "../features/decode/useDecode.js";
 import { useStations } from "../features/station/useStations.js";
 import { buildFieldExplainList } from "../features/explain/fieldExplain.js";
 import { buildTokenAnalysis } from "../features/analysis/buildTokenAnalysis.js";
+import { explainRemarkToken } from "../features/explain/remarkExplain.js";
 import { useI18n } from "../i18n/index.js";
 import { formatStationDisplay } from "../utils/format.js";
 import { getMessageType, getParsed, getNormalized, getStationCode } from "../utils/message.js";
@@ -332,6 +333,9 @@ function App() {
                       const fieldMatch = fieldList.find((field) => field.key === item.fieldKey);
                       let parsedValue =
                         fieldMatch?.explain || fieldMatch?.value || item.detail || item.token || "";
+                      if (item.fieldKey === "rmk_item") {
+                        parsedValue = explainRemarkToken(item.token, t);
+                      }
                       if (item.fieldKey === "trend") {
                         const tokenUpper = item.token.toUpperCase();
                         if (tokenUpper === "BECMG") {

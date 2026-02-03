@@ -183,6 +183,15 @@ export const en = {
       unknown: "Unknown",
     },
   },
+  remark: {
+    ao1: "Automated station (no precipitation sensor)",
+    ao2: "Automated station (precipitation sensor)",
+    slp: "Sea-level pressure {pressure} hPa",
+    temp_dewpoint: "Temperature {temp}°C, dew point {dew}°C",
+    temp_only: "Temperature {temp}°C",
+    dew_only: "Dew point {dew}°C",
+    precip_1h: "1-hour precipitation {amount} in",
+  },
   weather: {
     intensity: {
       "-": "light",

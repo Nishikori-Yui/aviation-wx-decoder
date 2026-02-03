@@ -63,8 +63,11 @@ function classifyToken({ token, parsed, normalized, messageType, t }) {
     return { label: t("analysis.labels.weather"), fieldKey: "weather" };
   }
 
-  if (parsed?.rmk_tokens?.includes(token) || token === "RMK") {
+  if (token === "RMK") {
     return { label: t("analysis.labels.remark"), fieldKey: "rmk" };
+  }
+  if (parsed?.rmk_tokens?.includes(token)) {
+    return { label: t("analysis.labels.remark"), fieldKey: "rmk_item" };
   }
 
   if (parsed?.trend && parsed.trend === upper) {
@@ -91,6 +94,9 @@ function classifyToken({ token, parsed, normalized, messageType, t }) {
 function tokenDetail({ token, parsed }) {
   if (parsed?.issue_time && token.endsWith("Z") && token.length === 7) {
     return formatUtcTime(parsed.issue_time);
+  }
+  if (parsed?.rmk_tokens?.includes(token)) {
+    return token;
   }
   return "";
 }

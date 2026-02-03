@@ -181,6 +181,15 @@ export const zhCN = {
       unknown: "未识别",
     },
   },
+  remark: {
+    ao1: "自动气象站（无降水识别传感器）",
+    ao2: "自动气象站（带降水识别传感器）",
+    slp: "海平面气压 {pressure} hPa",
+    temp_dewpoint: "气温 {temp}°C，露点 {dew}°C",
+    temp_only: "气温 {temp}°C",
+    dew_only: "露点 {dew}°C",
+    precip_1h: "过去 1 小时降水 {amount} in",
+  },
   weather: {
     intensity: {
       "-": "弱",
