@@ -19,4 +19,4 @@ tokio = { workspace = true }
 
 [dev-dependencies]
 reqwest = { workspace = true }
-
+tower_test = { package = "tower", version = "0.5", features = ["util"] }
