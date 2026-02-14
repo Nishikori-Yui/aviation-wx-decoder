@@ -27,7 +27,8 @@ impl Default for DecodeOptions {
 }
 
 pub fn decode_message(raw: &str, options: &DecodeOptions) -> core::DecodeResponse {
-    let detected = core::detect_message_type(raw);
+    let sanitized_raw = raw.trim_start_matches('\u{FEFF}');
+    let detected = core::detect_message_type(sanitized_raw);
     let requested = options.type_hint;
     let target = if requested == core::MessageType::Unknown {
         detected
@@ -36,16 +37,16 @@ pub fn decode_message(raw: &str, options: &DecodeOptions) -> core::DecodeRespons
     };
 
     let mut response = match target {
-        core::MessageType::Taf => aviation_wx_taf::decode_taf(raw, options.detail, &options.lang),
-        core::MessageType::Metar => aviation_wx_metar::decode_metar(raw, options.detail, &options.lang),
-        core::MessageType::Notam => aviation_wx_notam::decode_notam(raw, options.detail, &options.lang),
+        core::MessageType::Taf => aviation_wx_taf::decode_taf(sanitized_raw, options.detail, &options.lang),
+        core::MessageType::Metar => aviation_wx_metar::decode_metar(sanitized_raw, options.detail, &options.lang),
+        core::MessageType::Notam => aviation_wx_notam::decode_notam(sanitized_raw, options.detail, &options.lang),
         core::MessageType::Unknown => core::DecodeResponse {
             schema_version: "1.0".to_string(),
             message_type: core::MessageType::Unknown,
             requested_type: requested,
             detected_type: detected,
             final_type: core::MessageType::Unknown,
-            raw: raw.trim().to_string(),
+            raw: sanitized_raw.trim().to_string(),
             parsed: None,
             normalized: None,
             explain: None,
@@ -100,5 +101,4 @@ pub fn decode_message(raw: &str, options: &DecodeOptions) -> core::DecodeRespons
 
     response
 }
-
 
