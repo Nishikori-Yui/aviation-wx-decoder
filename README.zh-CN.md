@@ -93,6 +93,89 @@ Vite 环境变量：
 
 模板见 `web/.env.example`。
 
+### 平台运行说明（macOS / Linux / Windows）
+
+项目支持三大桌面平台。除特别说明外，命令都在仓库根目录执行。
+
+环境依赖：
+
+- Rust 稳定版工具链（`rustup`、`cargo`）
+- Node.js 20+ 与 npm
+- 可选：`wasm-pack`（WASM 模式）
+- Windows 建议使用 PowerShell 7+（便于执行 `scripts/` 下脚本）
+
+后端启动：
+
+- macOS / Linux：
+
+```bash
+cargo run -p backend
+```
+
+- Windows（PowerShell）：
+
+```powershell
+cargo run -p backend
+```
+
+前端启动：
+
+- macOS / Linux：
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
+- Windows（PowerShell）：
+
+```powershell
+cd web
+npm install
+npm run dev
+```
+
+WASM 构建：
+
+- macOS / Linux：
+
+```bash
+cargo install wasm-pack
+wasm-pack build crates/aviation-wx-wasm --target web --out-dir ../../web/public/wasm
+```
+
+- Windows（PowerShell）：
+
+```powershell
+cargo install wasm-pack
+wasm-pack build crates/aviation-wx-wasm --target web --out-dir ../../web/public/wasm
+```
+
+测试：
+
+- macOS / Linux：
+
+```bash
+cargo test
+```
+
+- Windows（PowerShell）：
+
+```powershell
+cargo test
+```
+
+后端冒烟测试脚本：
+
+- macOS / Linux：
+  - 建议手动用 `curl` 验证接口，或直接运行 `cargo test -p backend --tests`
+- Windows（PowerShell）：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/smoke.ps1
+```
+
 ## 机场数据集（OSM/ODbL）
 
 前端可将 ICAO 站点码映射为机场名称。数据来源于 OpenStreetMap（ODbL），由你在本地预生成后发布到 GitHub Releases。
@@ -151,6 +234,17 @@ Vite 环境变量：
 
 前端可通过 WASM 在本地解码。构建说明见 `docs/wasm.md`。
 
+## 文档索引
+
+英文与中文文档按同名配对维护：
+
+- `docs/api.md` / `docs/api.zh-CN.md`
+- `docs/assumptions.md` / `docs/assumptions.zh-CN.md`
+- `docs/cli.md` / `docs/cli.zh-CN.md`
+- `docs/metar_coverage.md` / `docs/metar_coverage.zh-CN.md`
+- `docs/schema.md` / `docs/schema.zh-CN.md`
+- `docs/wasm.md` / `docs/wasm.zh-CN.md`
+
 ### ODbL 署名
 
 机场数据来自 OpenStreetMap contributors（ODbL）。需要在 UI 和文档中标注来源，并提供派生数据的下载地址（GitHub Releases）。
@@ -203,6 +297,27 @@ Goldens 见 `crates/aviation-wx/tests/golden.rs`，fixtures 在 `tests/fixtures`
 ```bash
 INSTA_UPDATE=always cargo test -p aviation-wx
 ```
+
+## 常见问题
+
+- 端口被占用：
+  - 通过 `BACKEND_PORT` 修改端口，例如 `BACKEND_PORT=17644 cargo run -p backend`。
+- 前端提示找不到 WASM：
+  - 重新构建到 `web/public/wasm`，并确认 `.js` 与 `.wasm` 产物都存在。
+- 明明是合法报文却识别成 `unknown`：
+  - 先确认输入没有损坏；`decode_message` 已处理 UTF-8 BOM 前缀。
+- 跨机器结果不一致：
+  - 运行 `cargo clean && cargo test`，并确认 Rust/Node 主版本一致。
+
+## 文档同步规则
+
+修改任意英文 Markdown 文档时，必须在同一次变更中同步更新对应的 `*.zh-CN.md`。
+新增 Markdown 文档时，默认同时提供中英文两个版本。
+
+校验脚本：
+
+- macOS / Linux：`bash scripts/check-doc-i18n.sh`
+- Windows（PowerShell）：`powershell -ExecutionPolicy Bypass -File scripts/check-doc-i18n.ps1`
 
 ## 扩展指南
 

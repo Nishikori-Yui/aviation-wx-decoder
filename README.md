@@ -92,6 +92,89 @@ See `web/.env.example` for a template.
 
 Chinese documentation: `README.zh-CN.md`.
 
+### Platform Setup (macOS / Linux / Windows)
+
+The project supports all three major desktop platforms. Run the commands from repo root unless noted.
+
+Prerequisites:
+
+- Rust stable toolchain (`rustup`, `cargo`)
+- Node.js 20+ and npm
+- Optional: `wasm-pack` for WASM mode
+- Windows only: PowerShell 7+ recommended for scripts in `scripts/`
+
+Backend run:
+
+- macOS / Linux:
+
+```bash
+cargo run -p backend
+```
+
+- Windows (PowerShell):
+
+```powershell
+cargo run -p backend
+```
+
+Frontend run:
+
+- macOS / Linux:
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
+- Windows (PowerShell):
+
+```powershell
+cd web
+npm install
+npm run dev
+```
+
+WASM build:
+
+- macOS / Linux:
+
+```bash
+cargo install wasm-pack
+wasm-pack build crates/aviation-wx-wasm --target web --out-dir ../../web/public/wasm
+```
+
+- Windows (PowerShell):
+
+```powershell
+cargo install wasm-pack
+wasm-pack build crates/aviation-wx-wasm --target web --out-dir ../../web/public/wasm
+```
+
+Test:
+
+- macOS / Linux:
+
+```bash
+cargo test
+```
+
+- Windows (PowerShell):
+
+```powershell
+cargo test
+```
+
+Backend smoke test script:
+
+- macOS / Linux:
+  - run requests manually via `curl`, or run the backend tests with `cargo test -p backend --tests`
+- Windows (PowerShell):
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/smoke.ps1
+```
+
 ## Station Dataset (OSM/ODbL)
 
 The frontend can resolve ICAO station codes to airport names. Data is generated from OpenStreetMap (ODbL) and published as a static JSON file via GitHub Releases.
@@ -149,6 +232,17 @@ Before enabling Pages:
 ## WASM mode
 
 The frontend can decode locally via WASM. See `docs/wasm.md` for build steps.
+
+## Documentation
+
+English and Chinese Markdown docs are kept in pairs:
+
+- `docs/api.md` / `docs/api.zh-CN.md`
+- `docs/assumptions.md` / `docs/assumptions.zh-CN.md`
+- `docs/cli.md` / `docs/cli.zh-CN.md`
+- `docs/metar_coverage.md` / `docs/metar_coverage.zh-CN.md`
+- `docs/schema.md` / `docs/schema.zh-CN.md`
+- `docs/wasm.md` / `docs/wasm.zh-CN.md`
 
 ### ODbL Attribution
 
@@ -266,6 +360,27 @@ Golden tests live in `crates/aviation-wx/tests/golden.rs` and load fixtures from
 ```bash
 INSTA_UPDATE=always cargo test -p aviation-wx
 ```
+
+## Common Issues
+
+- Port already in use:
+  - change backend port with `BACKEND_PORT`, for example `BACKEND_PORT=17644 cargo run -p backend`.
+- WASM bundle not found in frontend:
+  - rebuild WASM artifacts into `web/public/wasm` and verify both `.js` and `.wasm` files exist.
+- Type detection becomes `unknown` for valid messages:
+  - ensure input is not corrupted; UTF-8 BOM at input start is now handled by `decode_message`.
+- Cross-machine mismatch:
+  - run `cargo clean && cargo test` and verify the same Rust/Node major versions are used.
+
+## Documentation Sync Policy
+
+When updating any English Markdown doc, update its matching `*.zh-CN.md` file in the same change.
+If a new Markdown document is added, include both language variants from day one.
+
+Validation scripts:
+
+- macOS / Linux: `bash scripts/check-doc-i18n.sh`
+- Windows (PowerShell): `powershell -ExecutionPolicy Bypass -File scripts/check-doc-i18n.ps1`
 
 ## Extending the Decoder
 
