@@ -58,15 +58,18 @@ Environment variables:
 ### Backend Smoke Test
 
 ```bash
-powershell -ExecutionPolicy Bypass -File scripts/smoke.ps1
+curl -s http://127.0.0.1:17643/healthz
+
+curl -s -X POST http://127.0.0.1:17643/v1/decode \
+  -H 'Content-Type: application/json' \
+  -d '{"message":"METAR RJTT 011200Z VRB03KT CAVOK 15/10 Q1017","type":"metar","output":{"json":true,"explain":true},"lang":"zh-CN","detail":"normal"}'
 ```
 
-Optional args:
+For fixture-driven checks on Linux/macOS, use Rust tests:
 
-- `-BackendUrl http://127.0.0.1:17643`
-- `-File tests/fixtures/metar/001.txt`
-- `-Message "METAR ..."`
-- `-BatchDir tests/fixtures/metar -Pattern *.txt`
+```bash
+cargo test -p backend --tests
+```
 
 ### Web Frontend
 
@@ -92,44 +95,25 @@ See `web/.env.example` for a template.
 
 Chinese documentation: `README.zh-CN.md`.
 
-### Platform Setup (macOS / Linux / Windows)
+### Platform Setup (macOS / Linux Bash)
 
-The project supports all three major desktop platforms. Run the commands from repo root unless noted.
+Run the commands from repo root unless noted.
 
 Prerequisites:
 
 - Rust stable toolchain (`rustup`, `cargo`)
 - Node.js 20+ and npm
 - Optional: `wasm-pack` for WASM mode
-- Windows only: PowerShell 7+ recommended for scripts in `scripts/`
 
 Backend run:
 
-- macOS / Linux:
-
 ```bash
-cargo run -p backend
-```
-
-- Windows (PowerShell):
-
-```powershell
 cargo run -p backend
 ```
 
 Frontend run:
 
-- macOS / Linux:
-
 ```bash
-cd web
-npm install
-npm run dev
-```
-
-- Windows (PowerShell):
-
-```powershell
 cd web
 npm install
 npm run dev
@@ -137,42 +121,23 @@ npm run dev
 
 WASM build:
 
-- macOS / Linux:
-
 ```bash
-cargo install wasm-pack
-wasm-pack build crates/aviation-wx-wasm --target web --out-dir ../../web/public/wasm
-```
-
-- Windows (PowerShell):
-
-```powershell
 cargo install wasm-pack
 wasm-pack build crates/aviation-wx-wasm --target web --out-dir ../../web/public/wasm
 ```
 
 Test:
 
-- macOS / Linux:
-
 ```bash
-cargo test
-```
-
-- Windows (PowerShell):
-
-```powershell
 cargo test
 ```
 
 Backend smoke test script:
 
-- macOS / Linux:
-  - run requests manually via `curl`, or run the backend tests with `cargo test -p backend --tests`
-- Windows (PowerShell):
+- Run requests manually via `curl`, or run backend tests:
 
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts/smoke.ps1
+```bash
+cargo test -p backend --tests
 ```
 
 ## Station Dataset (OSM/ODbL)
@@ -380,7 +345,6 @@ If a new Markdown document is added, include both language variants from day one
 Validation scripts:
 
 - macOS / Linux: `bash scripts/check-doc-i18n.sh`
-- Windows (PowerShell): `powershell -ExecutionPolicy Bypass -File scripts/check-doc-i18n.ps1`
 
 ## Extending the Decoder
 
