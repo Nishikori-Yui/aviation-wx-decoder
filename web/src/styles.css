@@ -504,6 +504,125 @@ button:hover:not(:disabled) {
   .grid {
     grid-template-columns: 1fr;
   }
+
+  .column {
+    display: contents;
+  }
+
+  .panel-input {
+    order: 1;
+  }
+
+  .panel-decode {
+    order: 2;
+  }
+
+  .panel-settings {
+    order: 3;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 18px clamp(18px, 4vw, 32px) 28px;
+  }
+
+  .panel {
+    padding: 14px;
+    box-shadow: 0 14px 32px rgba(12, 18, 22, 0.1);
+  }
+
+  .header {
+    padding: 24px clamp(18px, 4vw, 32px) 10px;
+  }
+
+  .footer {
+    padding: 0 clamp(18px, 4vw, 32px) 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .panel-actions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  textarea {
+    min-height: 110px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+
+  .status {
+    gap: 8px;
+  }
+
+  .chip {
+    font-size: 11px;
+  }
+
+  .decode-header {
+    display: none;
+  }
+
+  .decode-table {
+    gap: 6px;
+    max-height: min(58vh, 520px);
+    overflow: auto;
+    padding-right: 2px;
+  }
+
+  .decode-row {
+    grid-template-columns: minmax(92px, 0.9fr) minmax(0, 1.1fr);
+    grid-template-areas:
+      "field parsed";
+    align-items: center;
+    gap: 4px 10px;
+    padding: 8px 10px;
+  }
+
+  .decode-row span::before {
+    display: none;
+  }
+
+  .decode-field {
+    grid-area: field;
+    font-size: 12px;
+  }
+
+  .decode-raw {
+    display: none;
+  }
+
+  .decode-parsed {
+    grid-area: parsed;
+    font-size: 12px;
+    line-height: 1.35;
+    word-break: break-word;
+  }
+
+  .station-chip {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
 }
 
 @keyframes floatIn {

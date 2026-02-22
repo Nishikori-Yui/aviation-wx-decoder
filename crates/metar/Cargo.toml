@@ -1,12 +1,12 @@
 [package]
 name = "aviation-wx-metar"
-version = "0.1.3"
+version = "0.1.4"
 edition = "2021"
 license.workspace = true
 repository = "https://github.com/Nishikori-Yui/aviation-wx-decoder"
 description = "METAR parser and normalizer for aviation-wx."
 
 [dependencies]
-aviation-wx-core = { path = "../core", version = "0.1.3" }
+aviation-wx-core = { path = "../core", version = "0.1.4" }
 serde = { workspace = true }
 regex = { workspace = true }

@@ -163,7 +163,7 @@ function App() {
 
       <main className="grid">
         <div className="column">
-          <Panel title={t("ui.panels.input")}
+          <Panel className="panel-input" title={t("ui.panels.input")}
             subtitle={t("ui.panels.input_subtitle")}
             actions={
               <button className="secondary" type="button" onClick={handleSample}>
@@ -265,7 +265,7 @@ function App() {
             )}
           </Panel>
 
-          <Panel title={t("ui.panels.settings")} subtitle={t("ui.panels.settings_subtitle")}>
+          <Panel className="panel-settings" title={t("ui.panels.settings")} subtitle={t("ui.panels.settings_subtitle")}>
             <div className="field">
               <label className="label">{t("ui.dataset.label")}</label>
               <div className="meta-inline">
@@ -298,6 +298,7 @@ function App() {
         </div>
 
         <Panel
+          className="panel-decode"
           title={t("ui.panels.decode")}
           subtitle={t("ui.panels.decode_subtitle")}
           actions={
@@ -367,9 +368,15 @@ function App() {
                       }
                       return (
                         <div className="decode-row" key={item.key}>
-                          <span className="decode-field">{item.label}</span>
-                          <span className="decode-raw">{item.token}</span>
-                          <span className="decode-parsed">{parsedValue}</span>
+                          <span className="decode-field" data-label={t("ui.decode.field")}>
+                            {item.label}
+                          </span>
+                          <span className="decode-raw" data-label={t("ui.decode.raw")}>
+                            {item.token}
+                          </span>
+                          <span className="decode-parsed" data-label={t("ui.decode.parsed")}>
+                            {parsedValue}
+                          </span>
                         </div>
                       );
                     })}
