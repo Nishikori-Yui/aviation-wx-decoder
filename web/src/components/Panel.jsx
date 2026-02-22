@@ -1,8 +1,9 @@
 import React from "react";
 
-function Panel({ title, subtitle, actions, children }) {
+function Panel({ title, subtitle, actions, children, className = "" }) {
+  const panelClass = className ? `panel ${className}` : "panel";
   return (
-    <section className="panel">
+    <section className={panelClass}>
       {(title || actions) && (
         <div className="panel-header">
           <div>

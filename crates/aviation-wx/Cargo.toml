@@ -1,16 +1,16 @@
 [package]
 name = "aviation-wx"
-version = "0.1.2"
+version = "0.1.4"
 edition = "2021"
 license.workspace = true
 description = "Decode aviation weather messages (TAF/METAR/NOTAM) into structured JSON."
 repository = "https://github.com/Nishikori-Yui/aviation-wx-decoder"
 
 [dependencies]
-aviation-wx-core = { path = "../core", version = "0.1.2" }
-aviation-wx-taf = { path = "../taf", version = "0.1.2" }
-aviation-wx-metar = { path = "../metar", version = "0.1.2" }
-aviation-wx-notam = { path = "../notam", version = "0.1.2" }
+aviation-wx-core = { path = "../core", version = "0.1.4" }
+aviation-wx-taf = { path = "../taf", version = "0.1.4" }
+aviation-wx-metar = { path = "../metar", version = "0.1.4" }
+aviation-wx-notam = { path = "../notam", version = "0.1.4" }
 serde = { workspace = true }
 serde_json = { workspace = true }
 thiserror = { workspace = true }
