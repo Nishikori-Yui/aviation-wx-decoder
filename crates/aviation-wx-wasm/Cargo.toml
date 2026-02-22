@@ -1,16 +1,17 @@
 [package]
 name = "aviation-wx-wasm"
-version = "0.1.4"
+version = "0.1.5"
 edition = "2021"
 license.workspace = true
 description = "WASM bindings for aviation-wx."
+readme = "README.md"
 repository = "https://github.com/Nishikori-Yui/aviation-wx-decoder"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-aviation-wx = { path = "../aviation-wx", version = "0.1.4" }
+aviation-wx = { path = "../aviation-wx", version = "0.1.5" }
 serde = { workspace = true }
 serde_json = { workspace = true }
 thiserror = { workspace = true }

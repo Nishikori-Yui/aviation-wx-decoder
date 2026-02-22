@@ -1,10 +1,11 @@
 [package]
 name = "aviation-wx-core"
-version = "0.1.4"
+version = "0.1.5"
 edition = "2021"
 license.workspace = true
 repository = "https://github.com/Nishikori-Yui/aviation-wx-decoder"
 description = "Shared models and normalization helpers for aviation-wx."
+readme = "README.md"
 
 [dependencies]
 serde = { workspace = true }
