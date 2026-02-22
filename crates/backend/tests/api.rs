@@ -1,6 +1,6 @@
 ﻿use axum::body::Body;
 use axum::http::{Request, StatusCode};
-use tower::ServiceExt;
+use tower_test::ServiceExt;
 
 #[tokio::test]
 async fn healthz_ok() {
@@ -35,4 +35,3 @@ async fn decode_ok() {
         .unwrap();
     assert_eq!(response.status(), StatusCode::OK);
 }
-

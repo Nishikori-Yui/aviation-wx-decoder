@@ -58,15 +58,18 @@ Environment variables:
 ### Backend Smoke Test
 
 ```bash
-powershell -ExecutionPolicy Bypass -File scripts/smoke.ps1
+curl -s http://127.0.0.1:17643/healthz
+
+curl -s -X POST http://127.0.0.1:17643/v1/decode \
+  -H 'Content-Type: application/json' \
+  -d '{"message":"METAR RJTT 011200Z VRB03KT CAVOK 15/10 Q1017","type":"metar","output":{"json":true,"explain":true},"lang":"zh-CN","detail":"normal"}'
 ```
 
-Optional args:
+For fixture-driven checks on Linux/macOS, use Rust tests:
 
-- `-BackendUrl http://127.0.0.1:17643`
-- `-File tests/fixtures/metar/001.txt`
-- `-Message "METAR ..."`
-- `-BatchDir tests/fixtures/metar -Pattern *.txt`
+```bash
+cargo test -p backend --tests
+```
 
 ### Web Frontend
 
@@ -91,6 +94,51 @@ Environment variables (Vite):
 See `web/.env.example` for a template.
 
 Chinese documentation: `README.zh-CN.md`.
+
+### Platform Setup (macOS / Linux Bash)
+
+Run the commands from repo root unless noted.
+
+Prerequisites:
+
+- Rust stable toolchain (`rustup`, `cargo`)
+- Node.js 20+ and npm
+- Optional: `wasm-pack` for WASM mode
+
+Backend run:
+
+```bash
+cargo run -p backend
+```
+
+Frontend run:
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
+WASM build:
+
+```bash
+cargo install wasm-pack
+wasm-pack build crates/aviation-wx-wasm --target web --out-dir ../../web/public/wasm
+```
+
+Test:
+
+```bash
+cargo test
+```
+
+Backend smoke test script:
+
+- Run requests manually via `curl`, or run backend tests:
+
+```bash
+cargo test -p backend --tests
+```
 
 ## Station Dataset (OSM/ODbL)
 
@@ -149,6 +197,17 @@ Before enabling Pages:
 ## WASM mode
 
 The frontend can decode locally via WASM. See `docs/wasm.md` for build steps.
+
+## Documentation
+
+English and Chinese Markdown docs are kept in pairs:
+
+- `docs/api.md` / `docs/api.zh-CN.md`
+- `docs/assumptions.md` / `docs/assumptions.zh-CN.md`
+- `docs/cli.md` / `docs/cli.zh-CN.md`
+- `docs/metar_coverage.md` / `docs/metar_coverage.zh-CN.md`
+- `docs/schema.md` / `docs/schema.zh-CN.md`
+- `docs/wasm.md` / `docs/wasm.zh-CN.md`
 
 ### ODbL Attribution
 
@@ -266,6 +325,26 @@ Golden tests live in `crates/aviation-wx/tests/golden.rs` and load fixtures from
 ```bash
 INSTA_UPDATE=always cargo test -p aviation-wx
 ```
+
+## Common Issues
+
+- Port already in use:
+  - change backend port with `BACKEND_PORT`, for example `BACKEND_PORT=17644 cargo run -p backend`.
+- WASM bundle not found in frontend:
+  - rebuild WASM artifacts into `web/public/wasm` and verify both `.js` and `.wasm` files exist.
+- Type detection becomes `unknown` for valid messages:
+  - ensure input is not corrupted; UTF-8 BOM at input start is now handled by `decode_message`.
+- Cross-machine mismatch:
+  - run `cargo clean && cargo test` and verify the same Rust/Node major versions are used.
+
+## Documentation Sync Policy
+
+When updating any English Markdown doc, update its matching `*.zh-CN.md` file in the same change.
+If a new Markdown document is added, include both language variants from day one.
+
+Validation scripts:
+
+- macOS / Linux: `bash scripts/check-doc-i18n.sh`
 
 ## Extending the Decoder
 
